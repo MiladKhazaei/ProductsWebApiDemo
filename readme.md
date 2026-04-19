@@ -76,7 +76,7 @@ public class ProductsController : ControllerBase
 
 - Microsoft.EntityFrameworkCore (v.10.0.6)
 - Microsoft.EntityFrameworkCore.Tools (v.10.0.6)
-- Micrisoft.EntityFrameworkCore.Design (v.10.0.6)
+- Microsoft.EntityFrameworkCore.Design (v.10.0.6)
 - Microsoft.EntityFrameworkCore.SqlServer (v.10.0.6)
 
 ### 2. Define the Database Context (`Data/ApplicationDbContext.cs`)
