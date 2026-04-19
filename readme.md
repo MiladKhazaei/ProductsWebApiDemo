@@ -83,9 +83,9 @@ public class ProductsController : ControllerBase
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
-using MyWebApiDemo.Models;
+using ProductsWebApi.Models;
 
-namespace MyWebApiDemo.Data
+namespace ProductsWebApi.Data
 {
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : DbContext(options)
@@ -114,10 +114,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 ### 5. Create the Database Schema
 
-Run the following commands in the Package Manager Console (PMC) - (`ensure the project directory is selected`)
+Run the following command in the Package Manager Console (PMC) - (`ensure the project directory is selected`)
 
 ```powershell
-Add-Migration InitialCreate
 Update-Database
 ```
 
@@ -159,7 +158,7 @@ Request DTO -> Map to Entity -> Process -> Map to Response DTO -> Return
 Instead of returning the Product entity directly, the service projects only the necessary fields into a ProductResponse DTO.
 
 ```csharp
-using MyWebApiDemo.DTOs;
+using ProductsWebApi.DTOs;
 
 public async Task<List<ProductResponse>> GetAllProductsAsync()
 {
@@ -174,7 +173,7 @@ public async Task<List<ProductResponse>> GetAllProductsAsync()
         .ToListAsync();
 }
 
-public async Task<ProductResponse?> GetProductByIdAsync(Guid id)
+public async Task<ProductResponse?> GetProductByIdAsync(int id)
 {
     return await context.Products
         .Where(p => p.Id == id)
