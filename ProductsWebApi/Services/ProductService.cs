@@ -43,6 +43,7 @@ namespace ProductsWebApiDemo.Services
             {
                 Name = product.Name,
                 TotalCount = product.TotalCount,
+                SellCount = product.SellCount,
                 Price = product.Price,
             };
             context.Products.Add(newProduct);
@@ -53,6 +54,7 @@ namespace ProductsWebApiDemo.Services
                 Id = newProduct.Id,
                 Name = newProduct.Name,
                 Price = newProduct.Price,
+                SellPrice = newProduct.SellPrice,
             };
         }
         // Update/Edit
