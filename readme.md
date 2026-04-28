@@ -2,6 +2,10 @@
 
 A clean implementation of RESTful CRUD operations using **.NET 10** and **Entity Framework Core**. This project demonstrates the separation of concerns between database entities and Data Transfer Objects (DTOs) to ensure security and maintainability.
 
+## 👀 Testing
+
+![Web Api](./images/WebApiCrudOperations.gif)
+
 ## 🛠️ Technology Stack
 
 - **Framework:** .NET 10.0
